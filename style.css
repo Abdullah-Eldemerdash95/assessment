@@ -16,3 +16,212 @@ html {
 * {
   box-sizing: content-box;
 }
+
+header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100dvh;
+  width: 13vw;
+  background-color: #3282b9;
+  display: flex;
+  flex-direction: column;
+  gap: 10dvh;
+  padding-left: 2vw;
+  color: white;
+}
+
+header nav menu {
+  list-style: none;
+  padding-left: 10px;
+}
+
+header nav menu li {
+  margin-bottom: 20px;
+}
+header nav menu li a {
+  all: inherit;
+  cursor: pointer;
+}
+header nav menu li a:hover {
+  color: black;
+}
+
+header nav menu li::before {
+  content: " ";
+  border-top: 1px solid white;
+  width: 25%;
+  height: 1px;
+  display: block;
+}
+header p {
+  text-transform: capitalize;
+}
+header input {
+  width: 75%;
+}
+header input:focus {
+  outline: #000;
+}
+
+footer {
+  position: fixed;
+  left: 15vw;
+  bottom: 0px;
+  height: 7dvh;
+  width: 85vw;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body div section {
+  position: fixed;
+  height: 93dvh;
+  left: 15vw;
+  top: 0px;
+  overflow-y: auto;
+  text-align: center;
+  padding: 0 3vw;
+}
+body div section::-webkit-scrollbar {
+  width: 10px;
+}
+body div section::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 8px white;
+}
+body div section::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+body div section div {
+  padding: 17dvh 0;
+  text-align: left;
+}
+body div section p button {
+  padding: 3dvh 1vw;
+  background-color: #3282b8;
+  color: white;
+  border: none;
+  width: 8vw;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal menu {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  list-style: none;
+}
+.modal menu a {
+  color: #3282b8;
+  text-decoration-line: none;
+}
+.modal menu a:hover {
+  color: #5247e6;
+  text-decoration-line: none;
+}
+
+@media (min-width: 280px) and (max-width: 830px) {
+  header {
+    position: fixed;
+    height: 20dvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    gap: 0px;
+  }
+  header nav menu {
+    display: flex;
+    gap: 20px;
+  }
+  header nav menu li::before {
+    content: " ";
+    border-top: 1px solid white;
+    width: 50px;
+    height: 1px;
+    display: block;
+  }
+
+  body div section {
+    position: fixed;
+    height: 73dvh;
+    left: 0vw;
+    top: 20dvh;
+    overflow-y: auto;
+    text-align: center;
+    padding: 0 3vw;
+  }
+  body div section div {
+    padding: 2dvh 0;
+    text-align: left;
+  }
+  body div section p button {
+    padding: 3dvh 3vw;
+    background-color: #3282b8;
+    color: white;
+    border: none;
+    width: 15vw;
+  }
+  footer {
+    position: fixed;
+    height: 10dvh;
+    width: 100vw;
+    background-color: #333;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    left: 0px;
+    padding-left: 10px;
+  }
+
+  .modal menu {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+    list-style: none;
+  }
+}
